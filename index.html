@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caxy Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header" class="map-header">
+        <div id="imageContainer1" class="imageContainer">
+            <img src="map/header_logo.png" alt="Header Image 1" class="image1">
+        </div>
+        <div id="imageContainer2" class="imageContainer">
+            <img src="map/header_text.svg" alt="Header Image 2" class="image2">
+        </div>
+    </div>
+
+    <div id="map"></div>
+    <div id="popup" class="custom-popup" style="display: none;">
+        <span class="close-popup" onclick="closePopup()">×</span>
+        <div class="popup-content" id="popup-content"></div>
+    </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="buildings.js"></script>
+    <script src="main.js"></script>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Search...">
+        <button class="search-button" onclick="handleSearch()">Search</button>
+        <button class="search-button" onclick="unselect()">Unselect</button>
+        </div>
+
+</body>
+</html>
